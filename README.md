@@ -51,23 +51,23 @@ Destroy everything afterwards to avoid charges: `terraform destroy`
 ## Results
 
 ### 1. Bucket is private (Block Public Access ON)
-![Block public access](screenshots/01-s3-block-public-access.png)
+![Block public access](screenshots/sc1.png)
 
 ### 2. JSON bucket policy (CloudFront only)
-![Bucket policy](screenshots/02-bucket-policy.png)
+![Bucket policy](screenshots/sc2.png)
 
 ### 3. CloudFront distribution (OAC, HTTPS redirect)
-![CloudFront](screenshots/03-cloudfront-settings.png)
+![CloudFront](screenshots/sc3.png)
 
 ### 4. Terraform apply
-![Apply complete](screenshots/04-terraform-apply-complete.png)
+![Apply complete](screenshots/sc4.png)
 
 ### 5. Verification: direct S3 blocked, CDN works
 Direct S3 access returned **403**, CloudFront returned **200**, HTTP redirected to HTTPS, and the second request showed a cache **Hit**.
-![Verify](screenshots/05-verify-script-output.png)
+![Verify](screenshots/sc5.PNG)
 
 ### 6. Live site over HTTPS
-![Website](screenshots/06-website-https-padlock.png)
+![Website](screenshots/sc6.PNG)
 
 ### 7. Cleanup
 All resources were destroyed after testing to keep cost at zero.
